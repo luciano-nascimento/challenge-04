@@ -6,14 +6,13 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    
     /**
      * Show specific product.
      *
      * @param  int  $id
-     * @return \Illuminate\View\View
+     * @return App\Models\Product;
      */
-    public function show($id)
+    public function show(int $id): Product
     {
         return Product::findOrFail($id);
     }
